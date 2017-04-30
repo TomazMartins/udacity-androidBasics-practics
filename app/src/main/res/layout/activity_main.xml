@@ -11,26 +11,44 @@
     <TextView
         android:id="@+id/teamA"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:padding="@dimen/std_padding"
+        android:gravity="center"
+        android:text="@string/teamA" />
 
     <TextView
         android:id="@+id/points_teamA"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:padding="@dimen/std_padding"
+        android:gravity="center"
+        android:text="@string/default_points"/>
 
     <Button
         android:id="@+id/threePoints_teamA"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:padding="@dimen/std_padding"
+        android:gravity="center"
+        android:text="@string/threePoints"
+        android:textAllCaps="true" />
 
     <Button
         android:id="@+id/twoPoints_teamA"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:padding="@dimen/std_padding"
+        android:gravity="center"
+        android:text="@string/twoPoints"
+        android:textAllCaps="true" />
 
     <Button
         android:id="@+id/freeThrow_teamA"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:padding="@dimen/std_padding"
+        android:gravity="center"
+        android:text="@string/freeThrow"
+        android:textAllCaps="true" />
 
 </LinearLayout>
