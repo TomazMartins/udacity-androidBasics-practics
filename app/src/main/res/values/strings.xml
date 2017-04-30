@@ -5,4 +5,9 @@
     <string name="threePoints">+3 Points</string>
     <string name="twoPoints">+2 Points</string>
     <string name="freeThrow">Free Throw</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_main9">MainActivity9</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>

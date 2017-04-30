@@ -25,7 +25,7 @@
         android:text="@string/default_points"/>
 
     <Button
-        android:id="@+id/threePoints_teamA"
+        android:id="@+id/btn_threePoints_teamA"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/std_padding"
@@ -34,7 +34,7 @@
         android:textAllCaps="true" />
 
     <Button
-        android:id="@+id/twoPoints_teamA"
+        android:id="@+id/btn_twoPoints_teamA"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/std_padding"
@@ -43,7 +43,7 @@
         android:textAllCaps="true" />
 
     <Button
-        android:id="@+id/freeThrow_teamA"
+        android:id="@+id/btn_freeThrow_teamA"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/std_padding"
