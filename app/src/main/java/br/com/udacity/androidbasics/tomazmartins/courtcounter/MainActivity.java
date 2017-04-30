@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     private AppCompatButton btn_twoPoints_teamB;
     private AppCompatButton btn_freeThrow_teamB;
 
+    private AppCompatButton btn_reset_game;
+
     private int scoreTeamA;
     private int scoreTeamB;
 
@@ -37,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
         btn_twoPoints_teamB = (AppCompatButton) findViewById( R.id.btn_twoPoints_teamB );
         btn_freeThrow_teamB = (AppCompatButton) findViewById( R.id.btn_freeThrow_teamB );
 
+        btn_reset_game = (AppCompatButton) findViewById( R.id.btn_reset );
+
         scoreTeamA = 0;
         scoreTeamB = 0;
 
@@ -51,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
         addThreePointsTeamB();
         addTwoPointsTeamB();
         addOnePointTeamB();
+
+        resetGame();
     }
 
     public void addThreePointsTeamA() {
@@ -119,6 +125,19 @@ public class MainActivity extends AppCompatActivity {
 
     public void displayForTeamB( int score ) {
         score_TeamB.setText( String.valueOf( score ) );
+    }
+
+    public void resetGame() {
+        btn_reset_game.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick( View v ) {
+                scoreTeamA = 0;
+                scoreTeamB = 0;
+
+                displayForTeamA( scoreTeamA );
+                displayForTeamB( scoreTeamB );
+            }
+        } );
     }
 }
 
