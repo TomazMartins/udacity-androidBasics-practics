@@ -1,18 +1,19 @@
 package br.com.udacity.androidbasics.tomazmartins.courtcounter;
 
 import android.annotation.SuppressLint;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     private TextView scoreView;
     private AppCompatButton btn_threePoints_teamA;
     private AppCompatButton btn_twoPoints_teamA;
     private AppCompatButton btn_freeThrow_teamA;
+
+    private int scoreTeamA;
 
     @SuppressLint( "WrongViewCast" )
     @Override
@@ -25,38 +26,43 @@ public class MainActivity extends AppCompatActivity {
         btn_twoPoints_teamA = (AppCompatButton) findViewById( R.id.btn_twoPoints_teamA );
         btn_freeThrow_teamA = (AppCompatButton) findViewById( R.id.btn_freeThrow_teamA );
 
+        scoreTeamA = 0;
+
         setButtons();
     }
 
     public void setButtons() {
-        onClickThreePointsTeamA();
-        onClickTwoPointsTeamA();
-        onClickFreeThrowTeamA();
+        addThreePointsTeamA();
+        addTwoPointsTeamA();
+        addOnePointTeamA();
     }
 
-    public void onClickThreePointsTeamA() {
+    public void addThreePointsTeamA() {
         btn_threePoints_teamA.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick( View v ) {
-                displayForTeamA( 3 );
+                scoreTeamA += 3;
+                displayForTeamA( scoreTeamA );
             }
         } );
     }
 
-    public void onClickTwoPointsTeamA() {
+    public void addTwoPointsTeamA() {
         btn_twoPoints_teamA.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick( View v ) {
-                displayForTeamA( 2 );
+                scoreTeamA += 2;
+                displayForTeamA( scoreTeamA );
             }
         } );
     }
 
-    public void onClickFreeThrowTeamA() {
+    public void addOnePointTeamA() {
         btn_freeThrow_teamA.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick( View v ) {
-                displayForTeamA( 1 );
+                scoreTeamA += 1;
+                displayForTeamA( scoreTeamA );
             }
         } );
     }
