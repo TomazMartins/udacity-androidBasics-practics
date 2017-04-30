@@ -5,50 +5,111 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     tools:context="br.com.udacity.androidbasics.tomazmartins.courtcounter.MainActivity">
 
-    <TextView
-        android:id="@+id/teamA"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/std_padding"
-        android:gravity="center"
-        android:text="@string/teamA" />
+    <LinearLayout
+        android:id="@+id/layout_teamA"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/points_teamA"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/std_padding"
-        android:gravity="center"
-        android:text="@string/default_points"/>
+        <TextView
+            android:id="@+id/teamA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/std_padding"
+            android:gravity="center"
+            android:text="@string/teamA" />
 
-    <Button
-        android:id="@+id/btn_threePoints_teamA"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/std_padding"
-        android:gravity="center"
-        android:text="@string/threePoints"
-        android:textAllCaps="true" />
+        <TextView
+            android:id="@+id/points_teamA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/std_padding"
+            android:gravity="center"
+            android:text="@string/default_points"/>
 
-    <Button
-        android:id="@+id/btn_twoPoints_teamA"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/std_padding"
-        android:gravity="center"
-        android:text="@string/twoPoints"
-        android:textAllCaps="true" />
+        <Button
+            android:id="@+id/btn_threePoints_teamA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/std_padding"
+            android:gravity="center"
+            android:text="@string/threePoints"
+            android:textAllCaps="true" />
 
-    <Button
-        android:id="@+id/btn_freeThrow_teamA"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/std_padding"
-        android:gravity="center"
-        android:text="@string/freeThrow"
-        android:textAllCaps="true" />
+        <Button
+            android:id="@+id/btn_twoPoints_teamA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/std_padding"
+            android:gravity="center"
+            android:text="@string/twoPoints"
+            android:textAllCaps="true" />
+
+        <Button
+            android:id="@+id/btn_freeThrow_teamA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/std_padding"
+            android:gravity="center"
+            android:text="@string/freeThrow"
+            android:textAllCaps="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_teamB"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/teamB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/std_padding"
+            android:gravity="center"
+            android:text="@string/teamB" />
+
+        <TextView
+            android:id="@+id/points_teamB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/std_padding"
+            android:gravity="center"
+            android:text="@string/default_points"/>
+
+        <Button
+            android:id="@+id/btn_threePoints_teamB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/std_padding"
+            android:gravity="center"
+            android:text="@string/threePoints"
+            android:textAllCaps="true" />
+
+        <Button
+            android:id="@+id/btn_twoPoints_teamB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/std_padding"
+            android:gravity="center"
+            android:text="@string/twoPoints"
+            android:textAllCaps="true" />
+
+        <Button
+            android:id="@+id/btn_freeThrow_teamB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/std_padding"
+            android:gravity="center"
+            android:text="@string/freeThrow"
+            android:textAllCaps="true" />
+
+    </LinearLayout>
 
 </LinearLayout>

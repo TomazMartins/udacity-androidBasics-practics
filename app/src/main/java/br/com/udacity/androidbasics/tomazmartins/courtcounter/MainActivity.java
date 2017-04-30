@@ -8,12 +8,18 @@ import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    private TextView scoreView;
+    private TextView score_TeamA;
+    private TextView score_TeamB;
     private AppCompatButton btn_threePoints_teamA;
     private AppCompatButton btn_twoPoints_teamA;
     private AppCompatButton btn_freeThrow_teamA;
 
+    private AppCompatButton btn_threePoints_teamB;
+    private AppCompatButton btn_twoPoints_teamB;
+    private AppCompatButton btn_freeThrow_teamB;
+
     private int scoreTeamA;
+    private int scoreTeamB;
 
     @SuppressLint( "WrongViewCast" )
     @Override
@@ -21,12 +27,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_main );
 
-        scoreView = (TextView) findViewById( R.id.points_teamA );
+        score_TeamA = (TextView) findViewById( R.id.points_teamA );
         btn_threePoints_teamA = (AppCompatButton) findViewById( R.id.btn_threePoints_teamA );
         btn_twoPoints_teamA = (AppCompatButton) findViewById( R.id.btn_twoPoints_teamA );
         btn_freeThrow_teamA = (AppCompatButton) findViewById( R.id.btn_freeThrow_teamA );
 
+        score_TeamB = (TextView) findViewById( R.id.points_teamB );
+        btn_threePoints_teamB = (AppCompatButton) findViewById( R.id.btn_threePoints_teamB );
+        btn_twoPoints_teamB = (AppCompatButton) findViewById( R.id.btn_twoPoints_teamB );
+        btn_freeThrow_teamB = (AppCompatButton) findViewById( R.id.btn_freeThrow_teamB );
+
         scoreTeamA = 0;
+        scoreTeamB = 0;
 
         setButtons();
     }
@@ -35,6 +47,10 @@ public class MainActivity extends AppCompatActivity {
         addThreePointsTeamA();
         addTwoPointsTeamA();
         addOnePointTeamA();
+
+        addThreePointsTeamB();
+        addTwoPointsTeamB();
+        addOnePointTeamB();
     }
 
     public void addThreePointsTeamA() {
@@ -68,8 +84,41 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void displayForTeamA( int score ) {
-        TextView scoreView = (TextView) findViewById( R.id.points_teamA );
-        scoreView.setText( String.valueOf( score ) );
+        score_TeamA.setText( String.valueOf( score ) );
+    }
+
+    public void addThreePointsTeamB() {
+        btn_threePoints_teamB.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick( View v ) {
+                scoreTeamB += 3;
+                displayForTeamB( scoreTeamB );
+            }
+        } );
+    }
+
+    public void addTwoPointsTeamB() {
+        btn_twoPoints_teamB.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick( View v ) {
+                scoreTeamB += 2;
+                displayForTeamB( scoreTeamB );
+            }
+        } );
+    }
+
+    public void addOnePointTeamB() {
+        btn_freeThrow_teamB.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick( View v ) {
+                scoreTeamB += 1;
+                displayForTeamB( scoreTeamB );
+            }
+        } );
+    }
+
+    public void displayForTeamB( int score ) {
+        score_TeamB.setText( String.valueOf( score ) );
     }
 }
 
